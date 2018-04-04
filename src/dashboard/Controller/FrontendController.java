@@ -7,7 +7,11 @@ package dashboard.Controller;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.layout.Pane;
 
 /**
  * FXML Controller class
@@ -19,6 +23,43 @@ public class FrontendController implements Initializable {
     /**
      * Initializes the controller class.
      */
+    @FXML
+    private Pane pnlAcceuil,pnlEcommerce,pnlMedecins,pnlEvenements,pnlPharmacie,pnlAnnonce;
+    
+    @FXML
+    private Button btnAcceuil,btnMedecins,btnEvenements,btnEcommerce,btnAnnonce,btnPharmacie;
+    
+    @FXML
+    private void handleButtonAction(ActionEvent event)
+    {
+        if (event.getSource() == btnAcceuil )
+        {
+            pnlAcceuil.toFront();
+        }
+         if (event.getSource() == btnEcommerce )
+        {
+            pnlEcommerce.toFront();
+        }
+          if (event.getSource() == btnMedecins )
+        {
+            pnlMedecins.toFront();
+        }
+           if (event.getSource() == btnEvenements )
+        {
+            pnlEvenements.toFront();
+        }
+            if (event.getSource() == btnPharmacie )
+        {
+            pnlPharmacie.toFront();
+        }
+             if (event.getSource() == btnAnnonce )
+        {
+            pnlAnnonce.toFront();
+        }
+        
+        
+    }
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
