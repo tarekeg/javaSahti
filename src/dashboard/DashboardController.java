@@ -14,10 +14,11 @@ import javafx.scene.control.Label;
 
 /**
  *
- * @author tarek
+ * @author akrem
  */
 public class DashboardController implements Initializable {
     
+    int col;
     @FXML
     private Label label;
     
