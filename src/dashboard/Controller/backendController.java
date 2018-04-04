@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package dashboard;
+package dashboard.Controller;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -14,7 +14,7 @@ import javafx.fxml.Initializable;
  *
  * @author tarek
  */
-public class DashController implements Initializable {
+public class backendController implements Initializable {
 
     /**
      * Initializes the controller class.
