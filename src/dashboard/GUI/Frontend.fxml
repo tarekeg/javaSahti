@@ -2,11 +2,14 @@
 
 <?import java.net.URL?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 
-<AnchorPane id="AnchorPane" prefHeight="459.0" prefWidth="806.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/9.0.1" fx:controller="dashboard.Controller.FrontendController">
+<AnchorPane id="AnchorPane" prefHeight="459.0" prefWidth="806.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dashboard.Controller.FrontendController">
     <stylesheets>
         <URL value="@frontend.css" />
     </stylesheets>
@@ -16,9 +19,21 @@
             <Pane fx:id="pnlAcceuil" prefHeight="459.0" prefWidth="587.0" style="-fx-background-color: #23CE6B;" />
             <Pane fx:id="pnlMedecins" prefHeight="459.0" prefWidth="587.0" style="-fx-background-color: #1234;" />
             <Pane fx:id="pnlEvenements" prefHeight="459.0" prefWidth="587.0" style="-fx-background-color: blue;" />
-            <Pane fx:id="pnlEcommerce" prefHeight="459.0" prefWidth="587.0" style="-fx-background-color: pink;" />
             <Pane fx:id="pnlAnnonce" prefHeight="459.0" prefWidth="587.0" style="-fx-background-color: red;" />
             <Pane fx:id="pnlPharmacie" prefHeight="459.0" prefWidth="587.0" style="-fx-background-color: yellow;" />
+            <Pane fx:id="pnlEcommerce" prefHeight="459.0" prefWidth="587.0" style="-fx-background-color: white;">
+               <children>
+                  <TableView fx:id="tableProduits" layoutX="66.0" layoutY="68.0" prefHeight="331.0" prefWidth="472.0">
+                    <columns>
+                      <TableColumn fx:id="columnNom" prefWidth="75.0" text="Nom" />
+                      <TableColumn fx:id="columnDescription" prefWidth="223.20001220703125" text="Description" />
+                        <TableColumn fx:id="columnPrix" prefWidth="64.79998779296875" text="Prix" />
+                        <TableColumn fx:id="columnDispo" prefWidth="108.800048828125" text="Disponibilité" />
+                    </columns>
+                  </TableView>
+                  <Label layoutX="271.0" layoutY="26.0" text="Ecommerce" />
+                  <Button fx:id="btnload" layoutX="66.0" layoutY="411.0" mnemonicParsing="false" onAction="#loadData" prefHeight="25.0" prefWidth="138.0" text="Charger les produits" />
+               </children></Pane>
          </children>
       </AnchorPane>
       <AnchorPane prefHeight="459.0" prefWidth="224.0" style="-fx-background-color: #F0F7FF;" AnchorPane.bottomAnchor="0.0">

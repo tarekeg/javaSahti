@@ -11,7 +11,11 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.layout.Pane;
+import dashboard.Entity.produits;
+import javafx.collections.ObservableList;
 
 /**
  * FXML Controller class
@@ -28,6 +32,20 @@ public class FrontendController implements Initializable {
     
     @FXML
     private Button btnAcceuil,btnMedecins,btnEvenements,btnEcommerce,btnAnnonce,btnPharmacie;
+    @FXML
+    private TableView <produits> tableProduits;
+    @FXML
+    private TableColumn<produits, String> columnNom;
+    @FXML
+    private TableColumn<produits, String> columnDescription;
+    @FXML
+    private TableColumn<produits, Double> columnPrix;
+    @FXML
+    private TableColumn<produits, Boolean> columnDispo;
+    @FXML
+    private Button btnload;
+    
+    private ObservableList<produits>data;
     
     @FXML
     private void handleButtonAction(ActionEvent event)
@@ -64,5 +82,9 @@ public class FrontendController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
+
+    @FXML
+    private void loadData(ActionEvent event) {
+    }
     
 }
