@@ -2,53 +2,71 @@
 
 <?import java.net.URL?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
 <?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
 
-<AnchorPane id="AnchorPane" prefHeight="459.0" prefWidth="806.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dashboard.Controller.FrontendController">
+<AnchorPane id="AnchorPane" prefHeight="578.0" prefWidth="984.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dashboard.Controller.FrontendController">
     <stylesheets>
         <URL value="@frontend.css" />
     </stylesheets>
    <children>
-      <AnchorPane layoutX="217.0" prefHeight="459.0" prefWidth="587.0">
+      <AnchorPane layoutX="234.0" prefHeight="578.0" prefWidth="750.0" />
+      <AnchorPane prefHeight="578.0" prefWidth="227.0" style="-fx-background-color: #F0F7FF;">
          <children>
-            <Pane fx:id="pnlAcceuil" prefHeight="459.0" prefWidth="587.0" style="-fx-background-color: #23CE6B;" />
-            <Pane fx:id="pnlMedecins" prefHeight="459.0" prefWidth="587.0" style="-fx-background-color: #1234;" />
-            <Pane fx:id="pnlEvenements" prefHeight="459.0" prefWidth="587.0" style="-fx-background-color: blue;" />
-            <Pane fx:id="pnlAnnonce" prefHeight="459.0" prefWidth="587.0" style="-fx-background-color: red;" />
-            <Pane fx:id="pnlPharmacie" prefHeight="459.0" prefWidth="587.0" style="-fx-background-color: yellow;" />
-            <Pane fx:id="pnlEcommerce" prefHeight="459.0" prefWidth="587.0" style="-fx-background-color: white;">
-               <children>
-                  <TableView fx:id="tableProduits" layoutX="66.0" layoutY="68.0" prefHeight="331.0" prefWidth="472.0">
-                    <columns>
-                      <TableColumn fx:id="columnNom" prefWidth="75.0" text="Nom" />
-                      <TableColumn fx:id="columnDescription" prefWidth="223.20001220703125" text="Description" />
-                        <TableColumn fx:id="columnPrix" prefWidth="64.79998779296875" text="Prix" />
-                        <TableColumn fx:id="columnDispo" prefWidth="108.800048828125" text="Disponibilité" />
-                    </columns>
-                  </TableView>
-                  <Label layoutX="271.0" layoutY="26.0" text="Ecommerce" />
-                  <Button fx:id="btnload" layoutX="66.0" layoutY="411.0" mnemonicParsing="false" onAction="#loadData" prefHeight="25.0" prefWidth="138.0" text="Charger les produits" />
-               </children></Pane>
-         </children>
-      </AnchorPane>
-      <AnchorPane prefHeight="459.0" prefWidth="224.0" style="-fx-background-color: #F0F7FF;" AnchorPane.bottomAnchor="0.0">
-         <children>
-            <Button fx:id="btnAcceuil" layoutX="-1.0" layoutY="45.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="45.0" prefWidth="225.0" style="-fx-background-color: transparent;" text="Acceuil" />
-            <AnchorPane prefHeight="459.0" prefWidth="41.0" style="-fx-background-color: #fff;">
+            <Button layoutX="42.0" layoutY="37.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="192.0" style="-fx-background-color: #D0F5A9;" text="Acceuil" />
+            <Button layoutX="41.0" layoutY="117.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="192.0" style="-fx-background-color: transparent;" text="Medecins" />
+            <Button layoutX="42.0" layoutY="191.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="192.0" style="-fx-background-color: transparent;" text="Evenements" />
+            <Button layoutX="42.0" layoutY="262.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="192.0" style="-fx-background-color: transparent;" text="Ecommerce" />
+            <Button layoutX="41.0" layoutY="337.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="192.0" style="-fx-background-color: transparent;" text="Annonce" />
+            <AnchorPane prefHeight="578.0" prefWidth="41.0" style="-fx-background-color: #0B173B;">
                <effect>
                   <DropShadow />
                </effect>
+               <children>
+                  <ImageView fitHeight="37.0" fitWidth="34.0" layoutX="4.0" layoutY="477.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Customer_64px.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="34.0" fitWidth="27.0" layoutX="7.0" layoutY="537.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Shutdown_64px.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="27.0" fitWidth="34.0" layoutX="7.0" layoutY="416.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Notification_50px.png" />
+                     </image>
+                  </ImageView>
+               </children>
             </AnchorPane>
-            <Button fx:id="btnMedecins" layoutX="-1.0" layoutY="117.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="45.0" prefWidth="225.0" style="-fx-background-color: transparent;" text="Medecins" />
-            <Button fx:id="btnEvenements" layoutY="191.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="45.0" prefWidth="225.0" style="-fx-background-color: transparent;" text="Evenements" />
-            <Button fx:id="btnEcommerce" layoutY="262.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="45.0" prefWidth="225.0" style="-fx-background-color: transparent;" text="Ecommerce" />
-            <Button fx:id="btnAnnonce" layoutX="-1.0" layoutY="337.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="45.0" prefWidth="225.0" style="-fx-background-color: transparent;" text="Annonce" />
-            <Button fx:id="btnPharmacie" layoutX="-1.0" layoutY="403.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="45.0" prefWidth="225.0" style="-fx-background-color: transparent;" text="Pharmacie /Clinique" />
+            <ImageView fitHeight="34.0" fitWidth="35.0" layoutX="59.0" layoutY="123.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Medical%20Doctor_40px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="59.0" layoutY="197.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Event%20Accepted_48px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="59.0" layoutY="268.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Shopping%20Cart_48px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="59.0" layoutY="343.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Land%20Sales_48px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="59.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Home_48px.png" />
+               </image>
+            </ImageView>
          </children>
          <effect>
             <DropShadow />
